@@ -5,10 +5,15 @@ import java.util.Stack;
 public class CheckPalindrome {
 
     public static boolean isPalindrome(String inputString){
-        return inputString.equals(reverseString(inputString));
+
+        //New solution after figure out reverse() function in StringBuilder
+        return inputString.equals(new StringBuilder(inputString).reverse().toString());
+
+        //return inputString.equals(reverseString(inputString));
     }
 
 
+/*
     public static String reverseString(String auxString){
         Stack<Character> auxStack = new Stack<>();
         for (int i = 0; i <auxString.length(); i++) {
@@ -19,6 +24,6 @@ public class CheckPalindrome {
             result.append(auxStack.pop());
         }
         return result.toString();
-    }
+    } */
 
 }
