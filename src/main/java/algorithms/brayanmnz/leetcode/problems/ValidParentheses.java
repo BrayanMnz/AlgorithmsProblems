@@ -4,6 +4,10 @@ import java.util.Stack;
 
 public class ValidParentheses {
 
+    public static void main(String[] args) {
+        System.out.println(ValidParentheses.isValid("()[]{}"));
+    }
+
     public static boolean isValid(String s) {
         Stack<Character> stack = new Stack<>();
         for (char auxChar : s.toCharArray()) {
